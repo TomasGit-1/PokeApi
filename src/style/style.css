@@ -1,0 +1,46 @@
+.titles {
+
+
+}
+
+.header_div {
+    background-color: turquoise;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background_style {
+    /* background-image: url('../resource/5818321.jpg'); */
+    /* width: 500px; */
+    /* background-repeat: no-repeat;
+    background-position: center */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 750px;
+}
+
+.div_inside {
+    position: absolute; 
+    left: 100px; 
+    top: 18%;
+    width: 500px;
+}
+
+.div_titile {
+    position: absolute; 
+    left: 100px; 
+    top: 18%;
+    width: 500px;
+}
+
+
+.tableContainer{
+    background-color: #1E1F25;
+    border-radius: 20px;
+    height: 244px;
+    padding: 0 10px 10px 10px;
+    overflow: scroll;
+}

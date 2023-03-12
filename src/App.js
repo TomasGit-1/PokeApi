@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import './style/style.css'
+import ListPokemon from "./components/listPokemon";
 
+import pokedex from "../src/resource/5818321.jpg"
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <div className="container bg-danger  background_style mt-5" >
+            <img src={pokedex} alt="pokedex"/>
+            <div  className="div_inside">
+
+              <ListPokemon/>      
+            </div>
+        </div>
     </div>
   );
 }
