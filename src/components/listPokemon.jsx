@@ -1,12 +1,12 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Select from "react-select";
-import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 
 const ListPokemon = () => {
   const [lFullPokemon, setlFullPokemon] = useState([]);
   const [imgPokemon , setimgPokemon ] = useState('');
+  const [dataPokemon , setdataPokemon ] = useState('');
   useEffect(() => {
     var url = "https://pokeapi.co/api/v2/pokemon";
     axios.get(url).then((response) => {
@@ -25,6 +25,9 @@ const ListPokemon = () => {
     var url = item.url;
     axios.get(url).then((response) => {
       setimgPokemon(response.data.sprites.back_default);
+      console.log(response)
+      console.log(setdataPokemon)
+      setdataPokemon(response)
     });
   };
 
@@ -33,15 +36,13 @@ const ListPokemon = () => {
       <div>
         <Select options={lFullPokemon} onChange={alertClicked} />
         <div className="mt-2">
-          <Card style={{ width: "18rem" }}>
+          <Card style={{ width: "30rem" }}>
             <Card.Img variant="top" src={imgPokemon} />
             <Card.Body>
-              <Card.Title>Card Title</Card.Title>
+              <Card.Title></Card.Title>
               <Card.Text>
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
+                { JSON.stringify(dataPokemon) }
               </Card.Text>
-              <Button variant="primary">Go somewhere</Button>
             </Card.Body>
           </Card>
         </div>
